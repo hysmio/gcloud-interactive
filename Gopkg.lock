@@ -2,50 +2,90 @@
 
 
 [[projects]]
+  digest = "1:528822f6d0a9a0f85e3da7c74c9dbefca194b4ff48471d347f07295e21b568ca"
+  name = "github.com/briandowns/spinner"
+  packages = ["."]
+  pruneopts = ""
+  revision = "e3fb08e7443c496a847cb2eef48e3883f3e12c38"
+  version = "v1.6.1"
+
+[[projects]]
   branch = "master"
+  digest = "1:534bfc1a194affafadc94be31ac3e221de127e47c0c28b3fe8eddc7ca1656f2f"
   name = "github.com/chzyer/readline"
   packages = ["."]
+  pruneopts = ""
   revision = "2972be24d48e78746da79ba8e24e8b488c9880de"
 
 [[projects]]
+  digest = "1:c9bebdae4ac52d0c3bbe5876de3d72f3bb05b4986865cdb3f15e305e1dc4fbca"
+  name = "github.com/fatih/color"
+  packages = ["."]
+  pruneopts = ""
+  revision = "570b54cabe6b8eb0bc2dfce68d964677d63b5260"
+  version = "v1.5.0"
+
+[[projects]]
   branch = "master"
+  digest = "1:14a9763035ddd561bd2434463ff342a5cec5fd94730d2bd33d21a14714ee57e1"
   name = "github.com/juju/ansiterm"
-  packages = [".","tabwriter"]
+  packages = [
+    ".",
+    "tabwriter",
+  ]
+  pruneopts = ""
   revision = "720a0952cc2ac777afc295d9861263e2a4cf96a1"
 
 [[projects]]
+  digest = "1:b60ba8f16c4bd2c27ddab8c95f045d1275df450b28d0d95513a9e70c8ae9910c"
   name = "github.com/lunixbochs/vtclean"
   packages = ["."]
+  pruneopts = ""
   revision = "88cfb0c2efe8ed7b0ccf0af83db39359829027bb"
   version = "v1.0.0"
 
 [[projects]]
+  digest = "1:c681e70c7fa624be1d145c19ba5b4415b6107de934e18c067461e952266d2d71"
   name = "github.com/manifoldco/promptui"
-  packages = [".","list","screenbuf"]
+  packages = [
+    ".",
+    "list",
+    "screenbuf",
+  ]
+  pruneopts = ""
   revision = "157c96fb638a14d268b305cf2012582431fcc410"
   version = "v0.3.1"
 
 [[projects]]
+  digest = "1:d260ca4db8ced0871a1c06440b1e5835e2d982ed660ca529957d67f28cf24592"
   name = "github.com/mattn/go-colorable"
   packages = ["."]
+  pruneopts = ""
   revision = "8029fb3788e5a4a9c00e415f586a6d033f5d38b3"
   version = "v0.1.2"
 
 [[projects]]
+  digest = "1:afc2714dedf683e571932f94f8a8ec444679eb84e076e021f63de871c5bc6cb1"
   name = "github.com/mattn/go-isatty"
   packages = ["."]
+  pruneopts = ""
   revision = "e1f7b56ace729e4a73a29a6b4fac6cd5fcda7ab3"
   version = "v0.0.9"
 
 [[projects]]
   branch = "master"
+  digest = "1:6a8bd8cb9a92bd007831755e08d5f62810ecf6718e70cc38f0a85a91819a9497"
   name = "golang.org/x/sys"
   packages = ["unix"]
+  pruneopts = ""
   revision = "fde4db37ae7ad8191b03d30d27f258b5291ae4e3"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "6b5fb5c706daf3c22ae99c5130bce8162355d5bc91d22ff50f053b2700362ed7"
+  input-imports = [
+    "github.com/briandowns/spinner",
+    "github.com/manifoldco/promptui",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1
