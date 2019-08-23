@@ -1,17 +1,23 @@
 package gcloud
 
-import (
-	"os/exec"
-)
-
-func getConfig(key string) (string, error) {
-	cmd := exec.Command("gcloud", "config", "get-value", key)
-	output, err := cmd.Output()
-
-	return string(output), err
+// Project GCloud representation of project
+type Project struct {
+	ID     string
+	name   string
+	number string
 }
 
 // GetActiveProject gets the currently active project using `gcloud config get-value project`
 func GetActiveProject() (string, error) {
-	return getConfig("project")
+	return GetConfig("project")
+}
+
+// SetActiveProject sets the current project to projectId
+func SetActiveProject(projectID string) error {
+	return SetConfig("project", projectID)
+}
+
+// GetAllProjects gets all the projects GCloud has
+func GetAllProjects() ([]Project, error) {
+	CloudCommand("projects list")
 }
