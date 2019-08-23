@@ -90,6 +90,10 @@ func main() {
 
 	fmt.Printf("%s %s %s\n", infoText("Selected Cluster: "), attrText(cluster.Name), extraText("("+cluster.MasterIP+")"))
 
+	projects, err := gcloud.GetAllProjects()
+
+	fmt.Printf("Found project: %s %s\n", attrText(projects[0].Name), extraText("("+projects[0].ID+")"))
+
 	// // Get the current project
 	// spin.Prefix = "Getting current GCloud project: "
 	// spin.Start()
