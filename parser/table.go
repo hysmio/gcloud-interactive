@@ -15,6 +15,7 @@ func ParseTable(table string) []map[string]string {
 		return final
 	}
 
+	// Replace all tabs with spaces, because tabs don't affect len()
 	table = strings.ReplaceAll(table, "\t", "    ")
 
 	words := make([]string, 0)
@@ -51,7 +52,7 @@ func ParseTable(table string) []map[string]string {
 	for _, row := range rows {
 		// Ensure the length is >= 1
 		if len(row) <= 0 {
-			continue
+			break
 		}
 
 		// Create a map to store the values
