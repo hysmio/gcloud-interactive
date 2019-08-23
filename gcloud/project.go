@@ -2,6 +2,7 @@ package gcloud
 
 import (
 	"github.com/hysmio/gcloud-interactive/parser"
+	"github.com/manifoldco/promptui"
 )
 
 // Project GCloud representation of project
@@ -42,4 +43,11 @@ func GetAllProjects() ([]Project, error) {
 	}
 
 	return projects, err
+}
+
+// Format returns the string in a nicely formatted and coloured way
+func (p *Project) Format() string {
+	attrText := promptui.Styler(promptui.FGMagenta, promptui.FGBold)
+	extraText := promptui.Styler(promptui.FGFaint, promptui.FGBold)
+	return attrText(p.Name) + " " + extraText("("+p.ID+")")
 }
