@@ -32,7 +32,7 @@ git clone https://github.com/hysmio/gcloud-interactive
 cd gcloud-interactive
 
 # Build the project
-go build src/main.go
+go build
 ```
 
 ## Usage
